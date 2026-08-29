@@ -1,6 +1,6 @@
 import java.util.Scanner;
 
-public class calculater {
+public class calculator {
     public static void main(String[] args) {
         try (Scanner sc = new Scanner(System.in)) {
             System.out.println("Enter first number: ");
@@ -16,10 +16,22 @@ public class calculater {
             } else if(operation.equals("*")) {
                 System.out.println("Multiplication: " + (a * b));
             } else if(operation.equals("/")) {
-                System.out.println("Division: " + (a / b));
-            } else if(operation.equals("%")) {
-                System.out.println("Modulus: " + (a % b));
-            } else {
+                
+                if (b == 0) {
+                    System.out.println("Error: Division by zero is not allowed.");
+                } else {
+                    System.out.println("Division: " + (a / b));
+                }
+            } 
+            else if(operation.equals("%")) {
+                
+                if (b == 0) {
+                    System.out.println("Error: Modulus by zero is not allowed.");
+                } else {
+                    System.out.println("Modulus: " + (a % b));
+                }
+            } 
+            else {
                 System.out.println("Invalid operation.");
             }
         }
