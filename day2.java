@@ -53,5 +53,12 @@ public class day2 {
         } else {
             System.out.println("other days.");
         }
+    // learning about NOT (!) logical operators in Java
+        boolean isRaining = false;
+        if (!isRaining) {
+            System.out.println("you can go out.");
+        } else {
+            System.out.println("Take an umbrella.");
+        }    
     }
 }
